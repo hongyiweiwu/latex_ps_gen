@@ -57,12 +57,13 @@ function findPsIndex(directory: string, numberingScheme: PsNumberingScheme): str
         roman.toArabic(romanNumeralRegex.exec(filename)[0]));
     const arabicNumeralIndices = arabicNumeralFilenames.map((filename, _, __) =>
         Number.parseInt(arabicNumeralRegex.exec(filename)[0], 10));
-    const newIndex = Math.max(...romanNumeralIndices, ...arabicNumeralIndices) + 1;
+    const indices = [...romanNumeralIndices, ...arabicNumeralIndices, 0];
+    const newIndex = Math.max(...indices) + 1;
 
     if (numberingScheme === "roman") {
-        return roman.toRoman(newIndex);
+        return roman.toRoman(newIndex || 1);
     } else if (numberingScheme === "arabic") {
-        return newIndex.toString();
+        return (newIndex || 1).toString();
     }
 }
 
