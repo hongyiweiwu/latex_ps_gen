@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -69,7 +70,6 @@ function findPsIndex(directory, numberingScheme) {
     const arabicNumeralIndices = arabicNumeralFilenames.map((filename, _, __) => Number.parseInt(arabicNumeralRegex.exec(filename)[0], 10));
     const indices = [...romanNumeralIndices, ...arabicNumeralIndices, 0];
     const newIndex = Math.max(...indices) + 1;
-    console.log(Math.max(...romanNumeralIndices, ...arabicNumeralIndices));
     if (numberingScheme === "roman") {
         return roman.toRoman(newIndex || 1);
     }

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as fs from "fs";
 import prompts from "prompts";
 import * as roman from "roman-numerals";
