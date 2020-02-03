@@ -15,8 +15,8 @@ const indentation = "    ";
 
 async function main() {
     const argv = yargs.options({
-        config: { type: "string", alias: "c", demandOption: true },
-        dir: { type: "string", alias: "d", demandOption: true },
+        config: { type: "string", alias: "c", demandOption: true, default: "config.json" },
+        dir: { type: "string", alias: "d", demandOption: true, default: `${process.cwd()}/` },
     }).argv;
 
     const config = loadConfig(argv.dir, argv.config);

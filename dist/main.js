@@ -33,8 +33,8 @@ const indentation = "    ";
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const argv = yargs_1.default.options({
-            config: { type: "string", alias: "c", demandOption: true },
-            dir: { type: "string", alias: "d", demandOption: true },
+            config: { type: "string", alias: "c", demandOption: true, default: 'config.json' },
+            dir: { type: "string", alias: "d", demandOption: true, default: `${process.cwd()}/` },
         }).argv;
         const config = loadConfig(argv.dir, argv.config);
         const psIndex = findPsIndex(argv.dir, config.psNumberingScheme);
