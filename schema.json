@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "latex-ps-gen/schema",
+    "title": "latex-ps-gen Config File",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "courseTitle": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        },
+        "psNumberingScheme": {
+            "enum": [
+                "roman",
+                "arabic"
+            ]
+        },
+        "packages": {
+            "type": "array"
+        },
+        "questionNumberingScheme": {
+            "anyOf": [
+                {
+                    "properties": {
+                        "scheme": {
+                            "const": "enumerate",
+                            "type": "string"
+                        },
+                        "format": {
+                            "type": "string"
+                        }
+                    }
+                }, {
+                    "properties": {
+                        "scheme": {
+                            "const": "description"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
