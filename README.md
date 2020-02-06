@@ -35,8 +35,8 @@ Make sure that you have a separate folder for each course. In one such folder, r
     }
     ```
     where the format is how you want your label to be like. It can be any LaTeX code. Replace where you want the index of the question to be with `\alph*` if you want lowercase letter representation, `\Alph*` if you want uppercase letter representation, `\arabic*` if you want arabic, and `\roman*` if you want roman representation. Some sample format here (for the 3rd question):
-    - `\\textit{\roman*}` -- *iii*
-    - `\\textbf{Problem \arabic*}` -- **Problem 3**
+    - `\\textit{\\roman*}` -- *iii*
+    - `\\textbf{Problem \\arabic*}` -- **Problem 3**
 
     2. If each question has a non-sequential index (i.e. the teacher just assigns questions out of a textbook), set the property to
     ```json
