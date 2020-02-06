@@ -45,6 +45,8 @@ Make sure that you have a separate folder for each course. In one such folder, r
     }
     ```
 
+(Sample config files are available in the `examples` directory of the repo.)
+
 Now, save the config file. From now on, for each new assignment, enter this directory and type `lpg`. A new `.tex` file containing all the boilerplate will appear.
 
 NOTE: When writing properties for the config file, you need to escape certain characters inside the quotes: so instead of `"` and `\`, write `\"` and `\\`. Again, just write stuff in VSCode and if you didn't escape certain things you should see an error.

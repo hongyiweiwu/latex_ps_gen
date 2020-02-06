@@ -1,0 +1,15 @@
+{
+    "$schema": "/Users/yi/Documents/Repo.nosync/latex_ps_gen/schema.json",
+    "courseTitle": "Quantum Mechanics II",
+    "author": "Yi Hong",
+    "psNumberingScheme": "roman",
+    "questionNumberingScheme": {
+        "scheme": "enumerate",
+        "format": "\\textbf{Problem \\arabic*}"
+    },
+    "packages": [
+        "amsmath",
+        "amssymb",
+        "braket"
+    ]
+}
