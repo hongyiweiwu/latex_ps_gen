@@ -5,38 +5,47 @@
     "type": "object",
     "properties": {
         "$schema": {
-            "type": "string"
+            "type": "string",
+            "description": "DON'T REMOVE. USED BY latex-ps-gen INTERNALLY."
         },
         "courseTitle": {
-            "type": "string"
+            "type": "string",
+            "description": "Title of the course you're taking."
         },
         "author": {
-            "type": "string"
+            "type": "string",
+            "description": "Your name (or whoever's taking the class's)."
         },
         "psNumberingScheme": {
             "enum": [
                 "roman",
                 "arabic"
-            ]
+            ],
+            "description": "Whether you want to name your nth problem set as Assignment (n in roman numeral) or (n in arabic)"
         },
         "packages": {
-            "type": "array"
+            "type": "array",
+            "description": "List of packages you want to automatically include in each assignment. At least include amsmath and amssymb here."
         },
         "questionNumberingScheme": {
+            "description": "How you want your questions in each assignment to be numbered and labeled.",
             "anyOf": [
                 {
                     "properties": {
                         "scheme": {
+                            "description": "Question numbering scheme.",
                             "const": "enumerate",
                             "type": "string"
                         },
                         "format": {
+                            "description": "How you want the nth question's label to be formatted.",
                             "type": "string"
                         }
                     }
                 }, {
                     "properties": {
                         "scheme": {
+                            "description": "Question numbering scheme.",
                             "const": "description"
                         }
                     }
