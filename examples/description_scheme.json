@@ -1,7 +1,7 @@
 {
     "$schema": "/Users/yi/Documents/Repo.nosync/latex_ps_gen/schema.json",
     "courseTitle": "Honors Analysis II",
-    "author": "Yi Hong",
+    "author": "Kavya Tumkur",
     "psNumberingScheme": "roman",
     "questionNumberingScheme": {
         "scheme": "description"
